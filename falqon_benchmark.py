@@ -15,6 +15,7 @@ plt.show()
 cost_h, driver_h = qml.qaoa.min_vertex_cover(graph, constrained=False)
 
 # Function to build commutator Hamiltonian for Vertex Cover
+## Note, derived from https://pennylane.ai/qml/demos/tutorial_falqon/
 def build_commutator_hamiltonian(graph):
     H = qml.Hamiltonian([], [])
     graph_complement = nx.complement(graph)
